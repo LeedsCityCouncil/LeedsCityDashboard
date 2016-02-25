@@ -1,0 +1,88 @@
+<head>
+    <script type="text/javascript" src="http://www.imactivate.com/datadashboardfiles/moment.js">
+    </script>
+</head>
+
+<style>
+    #matchInformationHolder {
+        text-align: center;
+    }
+    
+    #match {
+        padding: 0.2em;
+        font-size: 0.95em;
+        border-top: dotted 1px white;
+        border-bottom: dotted 1px white;
+    }
+    
+    #competition {
+        font-size: 0.75em;
+        font-weight: bolder;
+        margin-bottom: 0.2em;
+    }
+    
+    #homeAway {
+        color: #49b0e6;
+        background-color: white;
+        padding: 0.3em 0.45em 0.2em 0.45em;
+        border-radius: 0.3em;
+        font-weight: bolder;
+        margin-right: 0.3em;
+        font-size: 0.8em;
+    }
+    
+    #matchLocation {
+        font-size: 0.7em;
+    }
+    
+    #matchDate {
+        font-size: 0.8em;
+        font-weight: bold;
+        margin-top: 0.25em;
+    }
+    
+    #versus {
+        font-size: 0.9em;
+    }
+    
+    #groundMap {
+        padding-top: 0.3em;
+    }
+    
+    #groundMap .map-canvas {
+        height: 5.2rem;
+        color: black;
+    }
+    
+    .matchCycle {
+        cursor: pointer;
+        font-size: 1.2em;
+        vertical-align: middle;
+        padding-left: 0.4em;
+        padding-right: 0.4em;
+    }
+</style>
+
+{{#stories/story-base}}
+
+<div id="matchInformationHolder">
+    <div id="competionHolder">
+        <span {{action "toggleMatch" 'back'}}><i class="matchCycle fa fa-caret-left"></i></span>
+        <span id="competition"></span>
+        <span {{action "toggleMatch" 'forward'}}><i class="matchCycle fa fa-caret-right"></i></span>
+    </div>
+    <div id="match"><span id="homeTeam"></span>
+        <br><span id="versus">vs.</span>
+        <br><span id="awayTeam"></span>
+    </div>
+
+
+    <div id="matchDate"></div>
+    <div id="locationDetails"><span id="homeAway"> </span><span id="matchLocation"></span>
+    </div>
+</div>
+
+<div id="groundMap">
+    {{google-map lat=lat lng= lng zoom=14 markers=markers gopt_styles=mapStyles gopt_zoomControl=false gopt_mapTypeControl=false }}
+</div>
+{{/stories/story-base}}

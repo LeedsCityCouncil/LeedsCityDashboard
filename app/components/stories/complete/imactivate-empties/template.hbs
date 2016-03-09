@@ -1,0 +1,21 @@
+<head>
+  <script type="text/javascript" src="http://www.imactivate.com/datadashboardfiles/regression.js">
+  </script>
+</head>
+
+{{#stories/story-base}}
+  <div class="empties-story__welcome">
+    <div>{{ select-2 content=items value=selectedOption optionValuePath="id" optionLabelPath="title" placeholder="Choose an ward" }}</div>
+    <div id='curve_chart'></div>
+    {{#if selectedOption}}
+
+    <div style="text-align:center;">
+    </div>{{/if}}
+  </div>
+
+<main class="empties-story">
+  {{#stories/story-slide loaded=loaded}}
+
+  {{/stories/story-slide}}
+</main>
+{{/stories/story-base}}

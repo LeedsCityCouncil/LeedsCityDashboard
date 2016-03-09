@@ -1,0 +1,35 @@
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<style>
+    #streetCafeTable {
+        display: none;
+        font-size: 0.75em;
+        border-bottom: 1px dotted white;
+        margin-bottom: 0.3em;
+    }
+    
+    #streetCafeMap .map-canvas {
+        height: 7.6rem;
+        color: black;
+    }
+    
+    .streetCafeCell {
+        padding: 0.4em 0.4em 0.4em 0;
+    }
+</style>
+
+{{#stories/story-base}}
+
+<div>{{ select-2 content=items value=selectedOption optionValuePath="id" optionLabelPath="title" placeholder="Choose a street cafe"}}</div>
+
+<table id="streetCafeTable">
+
+</table>
+
+<div id="streetCafeMap">
+    {{google-map lat=lat lng= lng zoom=14 markers=markers gopt_styles=mapStyles gopt_zoomControl=false gopt_mapTypeControl=false }}
+</div> {{/stories/story-base}}

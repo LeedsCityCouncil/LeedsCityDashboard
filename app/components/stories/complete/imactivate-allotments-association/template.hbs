@@ -1,0 +1,40 @@
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<style>
+    #associationAllotmentHolder {
+        display: none;
+        font-size: 0.75em;
+        border-bottom: 1px dotted white;
+        margin-bottom: 0.3em;
+    }
+    
+    .associationAllotmentContent {
+        display: inline-block;
+        vertical-align: top;
+        width: 40%;
+    }
+    
+    #associationAllotmentMap .map-canvas {
+        height: 8rem;
+        color: black;
+        margin-bottom: 1em;
+    }
+</style>
+
+{{#stories/story-base}}
+
+<div>{{ select-2 content=items value=selectedOption optionValuePath="id" optionLabelPath="title" placeholder="Choose an allotment"}}</div>
+
+<div id="associationAllotmentHolder">
+    <table id="associationAllotmentLocation"></table>
+    <table class="associationAllotmentContent" id="associationAllotmentDetails"></table>
+    <table class="associationAllotmentContent" id="associationAllotmentSizes"></table>
+</div>
+
+<div id="associationAllotmentMap">
+    {{google-map lat=lat lng= lng zoom=14 markers=markers gopt_styles=mapStyles gopt_zoomControl=false gopt_mapTypeControl=false }}
+</div> {{/stories/story-base}}

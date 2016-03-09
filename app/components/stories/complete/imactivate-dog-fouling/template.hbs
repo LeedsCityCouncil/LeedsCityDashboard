@@ -1,0 +1,82 @@
+<head>
+
+    <script type="text/javascript" src="http://www.imactivate.com/datadashboardfiles/moment.js">
+    </script>
+
+</head>
+
+<style>
+    .dogFoulingSection {
+        display: inline-block;
+    }
+    
+    #dogCurrentYear {
+        width: 170px;
+        vertical-align: top;
+        text-align: center;
+    }
+    
+    #currentYearHeading {
+        padding-top: 0.7em;
+        font-size: 1.8em;
+        font-weight: bold;
+        padding-bottom: 0.5em;
+    }
+    
+    #currentYearNumber {
+        font-size: 6em;
+        color: #49b0e6;
+        background-color: white;
+        border-radius: 100%;
+        padding: 0.2em;
+    }
+    
+    #dogPastYears {
+        border-top: 1px dotted white;
+        width: 115px;
+        margin-top: 0.9em;
+    }
+    
+    #dataValues {
+        font-size: 0.7em;
+    }
+    
+    #datesMessage {
+        font-size: 0.7em;
+        border-bottom: 1px dotted white;
+        padding-bottom: 0.2em;
+        margin-bottom: 0.8em;
+    }
+    
+    #dataValues {
+        vertical-align: top;
+    }
+    
+    .yearTitle {
+        font-size: 0.9em;
+        font-weight: bold;
+        padding-bottom: 0.2em;
+    }
+    
+    .yearHolder {
+        border-bottom: 1px dotted white;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        box-sizing: border-box;
+    }
+    
+    .yearNumber {
+        font-size: 1.3em;
+    }
+</style>
+
+{{#stories/story-base}}
+<div id="datesMessage"></div>
+<div id="dataValues">
+    <div id="dogCurrentYear" class="dogFoulingSection">
+        <div id="currentYearHeading"></div>
+        <span id="currentYearNumber"></span>
+    </div>
+    <div id="dogPastYears" class="dogFoulingSection"></div>
+</div>
+{{/stories/story-base}}

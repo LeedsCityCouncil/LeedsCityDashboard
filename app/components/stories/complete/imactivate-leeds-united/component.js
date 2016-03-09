@@ -15,7 +15,7 @@ default DefaultStory.extend({
         subTitle: 'Time and details of the next Leeds United fixture', // (Provide a story subtitle)
         author: 'imactivate',
 
-        description: 'See upcoming Leeds United fixtures for the 2015/16 season', // (Provide a longer description of the story)
+        description: 'See upcoming Leeds United fixtures for the 2015/16 season.', // (Provide a longer description of the story)
         license: 'Football fixures, (c) Leeds City Council, 2016, This information is licensed under the terms of the Open Government Licence.', // (Define which license applies to usage of the story)
         dataSourceUrl: 'http://leedsdatamill.org/dataset/fixtures-2014-15', // (Where did the data come from?)
         feedbackEmail: 'info@leedsdatamill.org', // (Provide an email users can contact about this story)
@@ -237,4 +237,6 @@ default DefaultStory.extend({
         });
 
     }.on('didInsertElement'),
+    
+    
 });

@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    #ridingCenterTitle {
+        font-size: 0.85em;
+        padding-bottom: 0.4em;
+    }
+    
+    #ridingCenterMap .map-canvas {
+        height: 8rem;
+        color: black;
+    }
+</style>
+
+{{#stories/story-base}} {{ select-2 content=items value=selectedOption optionValuePath="id" optionLabelPath="title" placeholder="Choose an area" }}
+<div id="ridingCenterTitle"></div>
+<div id="ridingCenterMap">
+    {{google-map lat=lat lng= lng zoom=14 markers=markers gopt_styles=mapStyles gopt_zoomControl=false gopt_mapTypeControl=false }}
+</div>
+{{/stories/story-base}}

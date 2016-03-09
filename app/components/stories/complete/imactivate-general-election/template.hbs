@@ -1,0 +1,29 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    #electionTable {
+        width: 100%;
+        font-size: 0.7em;
+        border-spacing: 0;
+    }
+    
+    .electionTableElement {
+        padding: 0.4em;
+    }
+    
+</style>
+
+{{#stories/story-base}} {{#stories/story-slider loaded=loaded}} {{#stories/story-slide}}
+
+<div>{{ select-2 content=items value=selectedOption optionValuePath="id" optionLabelPath="title" placeholder="Choose a ward"}}</div>
+
+<table id="electionTable">
+</table>
+
+{{/stories/story-slide}} {{#stories/story-slide}}
+
+<div id='generalElectionChart'></div>
+
+{{/stories/story-slide}} {{/stories/story-slider}} {{/stories/story-base}}

@@ -1,0 +1,61 @@
+<style>
+    #foodbankInformationHolder {
+        display: none;
+        font-size: 0.75em;
+        border-top: dotted 1px white;
+        border-bottom: dotted 1px white;
+        margin-bottom: 0.3em;
+    }
+    
+    #foodbankNotesHolder {
+        font-size: 0.75em;
+        margin-top: 0.3em;
+    }
+    
+    .foodbankCell {
+        padding: 0.4em 0.4em 0.4em 0;
+    }
+    
+    .foodbankInformation {
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+        vertical-align: top;
+        line-height: normal;
+    }
+    
+    #foodbanksMap .map-canvas {
+        height: 10rem;
+        color: black;
+    }
+    
+    .foodbankIcon {
+        font-weight: bold;
+    }
+    
+    #foodbanksMapTitle {
+        border-bottom: dotted 1px white;
+        font-size: 0.85em;
+        padding-bottom: 0.5em;
+        margin-bottom: 0.5em;
+    }
+</style>
+
+{{#stories/story-base}}{{#stories/story-slider loaded=loaded}} {{#stories/story-slide}} {{ select-2 content=items value=selectedOption optionValuePath="id" optionLabelPath="title" placeholder="Choose a foodbank" }}
+
+<table id="foodbankInformationHolder">
+    <tr id="foodbankAdd" class="foodbankInformation"></tr>
+    <tr id="foodbankTel" class="foodbankInformation"></tr>
+    <tr id="foodbankWeb" class="foodbankInformation"></tr>
+    <tr id="foodbankEmail" class="foodbankInformation"></tr>
+</table>
+
+<table id="foodbankNotesHolder">
+    <tr id="foodbankNotes" class="foodbankInformation"></tr>
+</table>
+
+{{/stories/story-slide}} {{#stories/story-slide}}
+<div id="foodbanksMapTitle"></div>
+<div id="foodbanksMap">
+    {{google-map lat=lat lng= lng zoom=14 markers=markers gopt_styles=mapStyles gopt_zoomControl=false gopt_mapTypeControl=false }}
+</div>
+{{/stories/story-slide}} {{/stories/story-slider}} {{/stories/story-base}}

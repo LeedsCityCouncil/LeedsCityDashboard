@@ -1,0 +1,14 @@
+<style>
+  #libraryVisitStatus {
+    text-align: center;
+    font-size: 0.75em;
+    margin-top: 0.2em;
+    padding-top: 0.3em;
+  }
+</style>
+
+{{#stories/story-base}}
+<div>{{ select-2 content=items value=selectedOption optionValuePath="id" optionLabelPath="title" placeholder="Choose a library" }}</div>
+<div id='libraryVisitsChart'></div>
+<div id="libraryVisitStatus"></div>
+{{/stories/story-base}}

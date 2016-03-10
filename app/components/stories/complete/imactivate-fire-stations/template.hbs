@@ -1,0 +1,13 @@
+<style>
+  #fireStationMap .map-canvas {
+        color: black;
+    }
+
+</style>
+
+{{#stories/story-base}}
+{{ select-2 content=items value=selectedOption optionValuePath="id" optionLabelPath="title" placeholder="Choose a fire station" }}
+<div id="fireStationMap">
+    {{google-map lat=lat lng= lng zoom=14 markers=markers gopt_styles=mapStyles gopt_zoomControl=false gopt_mapTypeControl=false }}
+</div>
+{{/stories/story-base}}

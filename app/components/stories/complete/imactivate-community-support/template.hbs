@@ -1,0 +1,36 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    #communitySupportHolder {
+        width: 100%;
+        display: none;
+        font-size: 0.75em;
+        border-bottom: 1px dotted white;
+        margin-bottom: 0.3em;
+    }
+    
+    #communitySupportMap .map-canvas {
+        height: 8rem;
+        color: black;
+        margin-bottom: 1em;
+    }
+    
+    .communitySupportCell {
+        vertical-align: top;
+        padding: 0.4em 0.4em 0.4em 0;
+        line-height: normal;
+    }
+</style>
+
+{{#stories/story-base}}
+
+<div>{{ select-2 content=items value=selectedOption optionValuePath="id" optionLabelPath="title" placeholder="Choose a group"}}</div>
+
+<table id="communitySupportHolder">
+</table>
+
+<div id="communitySupportMap">
+    {{google-map lat=lat lng= lng zoom=14 markers=markers gopt_styles=mapStyles gopt_zoomControl=false gopt_mapTypeControl=false }}
+</div> {{/stories/story-base}}

@@ -1,0 +1,55 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<style>
+    #jobshopDetails {
+        font-size: 0.75em;
+        border-bottom: 1px dotted white;
+        width: 100%;
+        margin-bottom: 0.3em;
+    }
+    
+    #jobshopMap .map-canvas {
+        height: 5.2rem;
+        color: black;
+    }
+    
+    .jobshopCell {
+        line-height: 100%;
+        padding: 0.2em 0.4em 0.2em 0;
+        padding-bottom: 0.7em;
+    }
+    
+    .jobCenterFacility {
+        margin: 0.8em 0em 0.8em 0em;
+        font-size: 0.75em;
+    }
+    
+    .jobFacilityIcon {
+        font-size: 1.5em;
+        vertical-align: middle;
+    }
+</style>
+
+{{#stories/story-base}}{{#stories/story-slider loaded=loaded}} {{#stories/story-slide}}
+
+<div>{{ select-2 content=items value=selectedOption optionValuePath="id" optionLabelPath="title" placeholder="Choose a location"}}</div>
+
+<table id="jobshopDetails">
+</table>
+
+
+<div id="jobshopMap">
+    {{google-map lat=lat lng= lng zoom=14 markers=markers gopt_styles=mapStyles gopt_zoomControl=false gopt_mapTypeControl=false }}
+</div>
+
+
+{{/stories/story-slide}} {{#stories/story-slide}}
+
+<div id="jobshopFacilities">
+
+</div>
+
+{{/stories/story-slide}}{{/stories/story-slider}} {{/stories/story-base}}

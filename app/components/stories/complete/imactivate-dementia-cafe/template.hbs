@@ -1,0 +1,49 @@
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    #dementiaCafeMap .map-canvas {
+        color: black;
+    }
+    
+    .cafeDetail {
+        margin-bottom: 0.3em;
+    }
+    
+    .dementiaCafeCell {
+        vertical-align: top;
+        line-height: normal;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+    
+    #dementiaCafeTitle {
+        font-size: 0.8em;
+        padding-bottom: 0.4em;
+    }
+    
+    #dementiaCafeDetails {
+        display: none;
+        font-size: 0.85em;
+        border-bottom: 1px dotted white;
+        padding-bottom: 0.3em;
+        margin-bottom: 0.3em;
+    }
+</style>
+
+{{#stories/story-base}} {{#stories/story-slider loaded=loaded}} {{#stories/story-slide}}
+
+<div>{{ select-2 content=items value=selectedOption optionValuePath="id" optionLabelPath="title" placeholder="Choose a Cafe"}}</div>
+
+<table id="dementiaCafeDetails">
+
+</table>
+
+{{/stories/story-slide}} {{#stories/story-slide}}
+<div id="dementiaCafeTitle"></div>
+<div id="dementiaCafeMap">
+    {{google-map lat=lat lng= lng zoom=14 markers=markers gopt_styles=mapStyles gopt_zoomControl=false gopt_mapTypeControl=false }}
+</div>
+{{/stories/story-slide}} {{/stories/story-slider}} {{/stories/story-base}}
